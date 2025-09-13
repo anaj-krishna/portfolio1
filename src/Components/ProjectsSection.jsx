@@ -24,7 +24,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Go Kerala",
+    title: "keral trips",
     description: "Comprehensive Kerala tourism platform developed for Kerala Tourism Development Corporation, featuring destinations, bookings, and cultural experiences.",
     image: project3Image,
     tags: ["React", "Node.js", "MongoDB", "Next.js", "Tailwind CSS"],
