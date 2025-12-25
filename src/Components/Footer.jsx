@@ -1,6 +1,6 @@
 import { ArrowUp, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
-/* ---------- Custom Icons (no extra libs) ---------- */
+/* ---------- Custom Icons ---------- */
 const GitLabIcon = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 22.545l4.5-13.84h-9zM2.2 9.57L1 13.11l11 9.435L2.2 9.57zm19.6 0L23 13.11 12 22.545 21.8 9.57zM20.1 1.455l-3.6 11.07h7.2zM3.9 1.455l3.6 11.07h-7.2z" />
@@ -18,6 +18,20 @@ export const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const GlowIcon = ({ href, children }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative group w-10 h-10 flex items-center justify-center rounded-xl overflow-hidden"
+    >
+      <span className="absolute inset-0 bg-[linear-gradient(90deg,#4285F4,#EA4335,#FBBC05,#34A853,#4285F4)] bg-[length:400%_100%] animate-ai-glow opacity-70 group-hover:opacity-100" />
+      <span className="relative flex items-center justify-center w-[36px] h-[36px] rounded-lg bg-black/80 backdrop-blur text-white transition-transform duration-300 group-hover:scale-110">
+        {children}
+      </span>
+    </a>
+  );
 
   return (
     <footer className="relative bg-gradient-to-br from-card via-card/95 to-secondary/20 border-t border-border/50">
@@ -44,49 +58,26 @@ export const Footer = () => {
               </p>
 
               {/* Social Icons */}
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/anaj-krishna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-secondary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-                >
+              <div className="flex items-center gap-4">
+                <GlowIcon href="https://github.com/anaj-krishna">
                   <Github size={18} />
-                </a>
+                </GlowIcon>
 
-                <a
-                  href="https://gitlab.com/anajkrishna77"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-secondary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-                >
-                  <GitLabIcon />
-                </a>
+                <GlowIcon href="https://gitlab.com/anajkrishna77">
+                  <GitLabIcon size={18} />
+                </GlowIcon>
 
-                <a
-                  href="https://www.linkedin.com/in/anaj-krishna-7a08bb2a7/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-secondary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-                >
+                <GlowIcon href="https://www.linkedin.com/in/anaj-krishna-7a08bb2a7/">
                   <Linkedin size={18} />
-                </a>
+                </GlowIcon>
 
-                <a
-                  href="https://www.kaggle.com/anajkrishna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-secondary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-                >
-                  <KaggleIcon />
-                </a>
+                <GlowIcon href="https://www.kaggle.com/anajkrishna">
+                  <KaggleIcon size={18} />
+                </GlowIcon>
 
-                <a
-                  href="mailto:anajkrishna36@gmail.com"
-                  className="p-2 rounded-lg bg-secondary/50 hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-                >
+                <GlowIcon href="mailto:anajkrishna36@gmail.com">
                   <Mail size={18} />
-                </a>
+                </GlowIcon>
               </div>
             </div>
 
@@ -120,10 +111,8 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-8" />
 
-          {/* Bottom */}
           <div className="flex justify-between items-center">
             <p className="text-sm text-muted-foreground">
               © 2024 Anaj Krishna. All rights reserved.
