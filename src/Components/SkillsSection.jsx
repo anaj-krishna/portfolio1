@@ -8,7 +8,7 @@ const skills = [
   { name: "React", category: "frontend" },
   { name: "TypeScript", category: "frontend" },
   { name: "Tailwind CSS", category: "frontend" },
-  { name: "Next.js", category: "frontend" },
+  { name: "Nest.js", category: "backend" },
 
   // Backend
   { name: "Node.js", category: "backend" },

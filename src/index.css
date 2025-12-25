@@ -160,3 +160,15 @@
   padding: 0;
   text-align: center;
 }
+@keyframes ai-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.animate-ai-glow {
+  animation: ai-glow 4s linear infinite;
+}
