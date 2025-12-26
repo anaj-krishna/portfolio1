@@ -64,7 +64,7 @@ export const Navbar = () => {
 
           {/* GitLab */}
           <a
-            href="https://gitlab.com/"
+            href="https://gitlab.com/anajkrishna77"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group p-[2px] rounded-full overflow-hidden"
@@ -77,7 +77,7 @@ export const Navbar = () => {
 
           {/* Kaggle (no image, just K) */}
           <a
-            href="https://www.kaggle.com/"
+            href="https://www.kaggle.com/anajkrishna"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group p-[2px] rounded-full overflow-hidden"
@@ -90,7 +90,7 @@ export const Navbar = () => {
 
           {/* Mail */}
           <a
-            href="mailto:yourmail@gmail.com"
+            href="mailto:anajkrishna36@gmail.com"
             className="relative group p-[2px] rounded-full overflow-hidden"
           >
             <span className="absolute inset-0 bg-[linear-gradient(90deg,#4285F4,#EA4335,#FBBC05,#34A853,#4285F4)] bg-[length:400%_100%] animate-ai-glow opacity-80 group-hover:opacity-100" />

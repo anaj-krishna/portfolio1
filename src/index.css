@@ -172,3 +172,93 @@
 .animate-ai-glow {
   animation: ai-glow 4s linear infinite;
 }
+:root {
+  --gemini-blue: #4285f4;
+  --gemini-cyan: #34d399;
+  --gemini-violet: #a855f7;
+}
+
+/* TEXT GRADIENT RUN */
+.text-gemini {
+  background: linear-gradient(
+    90deg,
+    var(--gemini-blue),
+    var(--gemini-cyan),
+    var(--gemini-violet),
+    var(--gemini-blue)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gemini-run 6s linear infinite;
+}
+
+/* PREMIUM SOFT GLOW */
+.gemini-glow {
+  text-shadow:
+    0 0 14px rgba(66,133,244,0.35),
+    0 0 28px rgba(52,211,153,0.25),
+    0 0 42px rgba(168,85,247,0.25);
+}
+
+@keyframes gemini-run {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* BUTTON */
+.gemini-button {
+  position: relative;
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  font-weight: 500;
+  color: white;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+}
+
+.gemini-button-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    90deg,
+    var(--gemini-blue),
+    var(--gemini-cyan),
+    var(--gemini-violet)
+  );
+  opacity: 0;
+  filter: blur(16px);
+  transition: opacity 0.4s ease;
+}
+
+.gemini-button:hover .gemini-button-glow {
+  opacity: 0.8;
+}
+
+/* FADE ANIMATIONS */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease forwards;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fade-in 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fade-in 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
